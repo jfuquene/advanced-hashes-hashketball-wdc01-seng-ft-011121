@@ -179,16 +179,6 @@ def player_numbers(input)
   return output
 end
 
-def player_stats(player_name)
-  player_name.capitalize!
-  if hashketball[:home][:players].include?(player_name)
-    hashketball[:home][:players][player_name][:stats]
-  elsif hashketball[:away][:players].include?(player_name)
-    hashketball[:away][:players][player_name][:stats]
-  else
-    "No player found."
-  end
-end
 
-puts player_stats("Jeff Adrien")
+
 
