@@ -179,7 +179,7 @@ def player_numbers(input)
   return output
 end
 
-def player_stats(player_name, hashketball)
+def player_stats(player_name)
   player_name.capitalize!
   if hashketball[:home][:players].include?(player_name)
     hashketball[:home][:players][player_name][:stats]
@@ -190,5 +190,5 @@ def player_stats(player_name, hashketball)
   end
 end
 
-puts player_stats("Jeff Adrien", hashketball)
+puts player_stats("Jeff Adrien")
 
