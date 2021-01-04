@@ -179,15 +179,16 @@ def player_numbers(input)
   return output
 end
 
-def player_stats(player_name)
-playerdata = nil
- game_hash.collect do |team, stats|
-  stats[:players].collect do |player, data|
+def player_stats(player_name, hashketball)
+  player_name.capitalize!
+  if hashketball[:home][:players].include?(player_name)
+    hashketball[:home][:players][player_name][:stats]
+  elsif hashketball[:away][:players].include?(player_name)
+    hashketball[:away][:players][player_name][:stats]
+  else
+    "No player found."
+  end
+end
 
-    if player == player_name
-      playerdata = data
-    end 
-  end 
- end 
-playerdata
-end 
+puts player_stats("Jeff Adrien", hashketball)
+
