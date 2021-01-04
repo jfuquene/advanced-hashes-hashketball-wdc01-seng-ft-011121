@@ -179,6 +179,6 @@ end
 return output 
 end 
 
-def player_stats(player_name)
+def player_stats player_name
   players[player_name]
 end
