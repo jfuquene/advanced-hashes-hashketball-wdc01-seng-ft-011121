@@ -167,5 +167,4 @@ def player_numbers team_name
   team(team_name)[:players].map{|key, value| value[:number]}
 
 def player_stats player_name
-  player [player_name]
-end
+  player[player_name]
