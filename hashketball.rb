@@ -175,7 +175,4 @@ def player_numbers(team_name)
 numbs
 end 
 
-def player_stats player_name
-  player[player_name]
-end 
-end 
+
