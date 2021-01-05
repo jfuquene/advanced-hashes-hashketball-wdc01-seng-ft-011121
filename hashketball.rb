@@ -179,17 +179,14 @@ def player_numbers(input)
   return output
 end
 
-def player_stats(name) 
-  player_hash = {}
-  game_hash.each do |team_position, team_data|
-    return team_data[:players].each do |player_name, player_data|
-      if player_name == name 
-        return player_data
-        elsif player_name =! name 
-        return nil 
-      end 
-    end 
-  end 
+def player_stats (player_n)
+  game_hash.each_key do |ha|
+    game_hash[ha][:players].each_entry do |playerhash|
+      if playerhash[:player_name] == player_n
+        return playerhash
+      end
+    end
+  end
 end
 
 
